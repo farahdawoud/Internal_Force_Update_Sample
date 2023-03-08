@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Linking} from 'react-native';
 import Modal from 'react-native-modal';
 import Button from '../Button/Button.view';
 import styles from './UpdateModal.styles';
@@ -13,6 +13,17 @@ export const UpdateModal = ({
   updateData?: any;
   setModalVisibility: Function;
 }): JSX.Element => {
+  const openStore = () => {
+    const link = 'itms-apps://apps.apple.com/eg/app/fransimobile/id428927940';
+    Linking.canOpenURL(link).then(
+      supported => {
+        console.log('hihgy');
+
+        supported && Linking.openURL(link);
+      },
+      err => console.log(err),
+    );
+  };
   return (
     <Modal isVisible={isModalVisible}>
       <View style={styles.mainContainer}>
@@ -21,7 +32,7 @@ export const UpdateModal = ({
         <Text style={styles.updateMessage}>{updateData.updateMessage}</Text>
 
         <View style={styles.buttonsContainer}>
-          {updateData.forceUpdate && (
+          {!updateData.forceUpdate && (
             <Button
               title="Close"
               titleStyle={styles.closeButtonTitle}
@@ -31,6 +42,7 @@ export const UpdateModal = ({
           )}
           <Button
             title="Update Now"
+            onPress={() => openStore()}
             titleStyle={styles.updateButtonTitle}
             viewStyle={styles.updateButton}
           />
