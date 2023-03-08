@@ -34,11 +34,11 @@ export default StyleSheet.create({
     marginBottom: 18,
   },
   updateButtonTitle: {
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: colors.white,
   },
   closeButtonTitle: {
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: colors.black,
   },
 });
