@@ -23,6 +23,7 @@ export const UpdateModal = ({
       err => console.log(err),
     );
   };
+
   return (
     <Modal
       isVisible={isModalVisible}

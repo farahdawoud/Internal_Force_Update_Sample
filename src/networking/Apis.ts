@@ -1,3 +1,9 @@
+import {Platform} from 'react-native';
+import DeviceInfo from 'react-native-device-info';
+
+const PLATFORM = Platform.OS.toUpperCase();
+let VERSION = DeviceInfo.getVersion();
+
 export default {
-  checkUpdate: '/version-check/1', //TODO: change version name
+  checkUpdate: `/app-version/version/${VERSION}/platform/${PLATFORM}`,
 };

@@ -12,7 +12,7 @@ const HomeScreen = (): JSX.Element => {
       const response = await axiosInstance.get(Apis.checkUpdate);
       console.log('Data ', response.data);
       setCheckUpdateData(response.data);
-      if (response.data.flexibleUpdate || response.data.forceUpdate) {
+      if (response.data.flexibleUpgrade || response.data.forceUpgrade) {
         setModalVisibility(true);
       }
     } catch (e) {
