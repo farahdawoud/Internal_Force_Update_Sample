@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, Linking} from 'react-native';
+import {View, Text, Linking, Image} from 'react-native';
 import Modal from 'react-native-modal';
+import images from '../../../assets/images';
 import Button from '../Button/Button.view';
 import styles from './UpdateModal.styles';
 
@@ -17,8 +18,6 @@ export const UpdateModal = ({
     const link = 'itms-apps://apps.apple.com/eg/app/fransimobile/id428927940';
     Linking.canOpenURL(link).then(
       supported => {
-        console.log('hihgy');
-
         supported && Linking.openURL(link);
       },
       err => console.log(err),
@@ -27,6 +26,11 @@ export const UpdateModal = ({
   return (
     <Modal isVisible={isModalVisible}>
       <View style={styles.mainContainer}>
+        <Image
+          source={images.updateModalImage}
+          resizeMode="contain"
+          style={styles.image}
+        />
         <Text style={styles.mainTitle}>We're better than ever!</Text>
 
         <Text style={styles.updateMessage}>{updateData.updateMessage}</Text>
