@@ -24,7 +24,11 @@ export const UpdateModal = ({
     );
   };
   return (
-    <Modal isVisible={isModalVisible}>
+    <Modal
+      isVisible={isModalVisible}
+      hideModalContentWhileAnimating={true}
+      animationOut="slideOutDown"
+      useNativeDriver={true}>
       <View style={styles.mainContainer}>
         <Image
           source={images.updateModalImage}
@@ -33,7 +37,10 @@ export const UpdateModal = ({
         />
         <Text style={styles.mainTitle}>We're better than ever!</Text>
 
-        <Text style={styles.updateMessage}>{updateData.updateMessage}</Text>
+        <Text style={styles.updateMessage}>
+          {updateData.updateMessage}. We've done some enhancements and want you
+          to have the best version
+        </Text>
 
         <View style={styles.buttonsContainer}>
           {!updateData.forceUpdate && (
