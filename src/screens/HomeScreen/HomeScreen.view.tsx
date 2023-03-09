@@ -14,14 +14,13 @@ export const HomeScreenView = ({
 }): JSX.Element => {
   return (
     <View style={HomeScreenStyles.mainContainer}>
-      <Text>Home Screen</Text>
-      {isModalVisible && (
-        <UpdateModal
-          isModalVisible={isModalVisible}
-          updateData={updateData}
-          setModalVisibility={setModalVisibility}
-        />
-      )}
+      <Text style={HomeScreenStyles.mainTitle}>Internal Update Sample</Text>
+
+      <UpdateModal
+        isModalVisible={isModalVisible}
+        updateData={updateData}
+        setModalVisibility={setModalVisibility}
+      />
     </View>
   );
 };

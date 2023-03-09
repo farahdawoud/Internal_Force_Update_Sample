@@ -6,7 +6,11 @@ export default StyleSheet.create({
   mainContainer: {
     backgroundColor: colors.white,
     height: metrics.screenHeight,
-    justifyContent: 'center',
     alignItems: 'center',
+  },
+  mainTitle: {
+    fontWeight: '600',
+    marginTop: 60,
+    fontSize: 24,
   },
 });
