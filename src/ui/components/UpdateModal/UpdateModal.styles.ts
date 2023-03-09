@@ -25,8 +25,10 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   updateMessage: {
-    fontWeight: 'bold',
+    fontWeight: '500',
     marginBottom: 40,
+    textAlign: 'center',
+    marginHorizontal: 30,
   },
   mainTitle: {
     fontWeight: 'bold',
