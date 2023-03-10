@@ -44,7 +44,7 @@ export const UpdateModal = ({
         </Text>
 
         <View style={styles.buttonsContainer}>
-          {!updateData.forceUpdate && (
+          {!updateData.forceUpgrade && (
             <Button
               title="Close"
               titleStyle={styles.closeButtonTitle}
