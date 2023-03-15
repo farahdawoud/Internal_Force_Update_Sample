@@ -15,7 +15,6 @@ export const HomeScreenView = ({
   return (
     <View style={HomeScreenStyles.mainContainer}>
       <Text style={HomeScreenStyles.mainTitle}>Internal Update Sample</Text>
-
       <UpdateModal
         isModalVisible={isModalVisible}
         updateData={updateData}
