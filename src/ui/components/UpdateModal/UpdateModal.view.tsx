@@ -38,10 +38,7 @@ export const UpdateModal = ({
         />
         <Text style={styles.mainTitle}>We're better than ever!</Text>
 
-        <Text style={styles.updateMessage}>
-          {updateData.updateMessage}. We've done some enhancements and want you
-          to have the best version
-        </Text>
+        <Text style={styles.updateMessage}>{updateData.updateMessage}.</Text>
 
         <View style={styles.buttonsContainer}>
           {!updateData.forceUpgrade && (
